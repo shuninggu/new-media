@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shuning Gu - CSCE 656 New Media</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .section-title {
+            color: #5a4fcf;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        /* Section 1: About Me */
+        .about-section {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .profile-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #667eea;
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .about-content {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .name {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        .statement {
+            color: #555;
+            font-size: 1rem;
+        }
+
+        /* Section 2: Media Usage */
+        .media-category {
+            margin-bottom: 25px;
+        }
+
+        .media-category:last-child {
+            margin-bottom: 0;
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        .category-icon {
+            font-size: 1.5rem;
+        }
+
+        .category-title {
+            font-size: 1.2rem;
+            color: #444;
+            font-weight: 600;
+        }
+
+        .category-type {
+            font-size: 0.8rem;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-weight: 500;
+        }
+
+        .consumer {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+
+        .generator {
+            background: #e8f5e9;
+            color: #388e3c;
+        }
+
+        .both {
+            background: #fff3e0;
+            color: #f57c00;
+        }
+
+        .subcategory-list {
+            list-style: none;
+            padding-left: 20px;
+        }
+
+        .subcategory-list li {
+            padding: 8px 0;
+            border-left: 3px solid #667eea;
+            padding-left: 15px;
+            margin-bottom: 8px;
+        }
+
+        .subcategory-name {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .examples {
+            color: #777;
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+
+        /* Section 3: Challenges */
+        .challenge-content {
+            background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
+            border-left: 4px solid #e53935;
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .challenge-title {
+            color: #c62828;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .challenge-description {
+            color: #555;
+        }
+
+        .challenge-description p {
+            margin-bottom: 12px;
+        }
+
+        .challenge-description p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            color: white;
+            padding: 20px;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 600px) {
+            .about-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .name {
+                font-size: 2rem;
+            }
+
+            .card {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Section 1: About Me -->
+        <div class="card">
+            <h2 class="section-title">Section 1: About Me</h2>
+            <div class="about-section">
+                <img src="shuning.jpg" alt="Photo of Shuning Gu" class="profile-photo">
+                <div class="about-content">
+                    <h1 class="name">Shuning Gu</h1>
+                    <p class="subtitle">Ph.D. Student in Computer Science | Texas A&M University</p>
+                    <p class="statement">
+                        I am taking CSCE 656 - New Media because I believe understanding the intersection of
+                        technology and media is essential for any computer scientist today. As a PhD student,
+                        my research often involves developing systems that interact with users through various
+                        digital interfaces. This course provides valuable insights into how people consume and
+                        create content across different platforms, which directly informs how I design and
+                        evaluate computational systems. Additionally, I am interested in exploring how emerging
+                        technologies like AI and machine learning are transforming media production and
+                        consumption patterns.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2: Media Usage -->
+        <div class="card">
+            <h2 class="section-title">Section 2: Media I Frequently Use</h2>
+
+            <!-- Social Media -->
+            <div class="media-category">
+                <div class="category-header">
+                    <span class="category-icon">📱</span>
+                    <span class="category-title">Social Media</span>
+                    <span class="category-type both">Consumer & Generator</span>
+                </div>
+                <ul class="subcategory-list">
+                    <li>
+                        <span class="subcategory-name">Professional Networking</span><br>
+                        <span class="examples">LinkedIn - sharing research updates, connecting with academics and industry professionals, reading tech news</span>
+                    </li>
+                    <li>
+                        <span class="subcategory-name">Microblogging / News</span><br>
+                        <span class="examples">X (Twitter) - following CS researchers, AI/ML discussions, tech industry news, academic conference updates</span>
+                    </li>
+                    <li>
+                        <span class="subcategory-name">Visual Social Sharing</span><br>
+                        <span class="examples">Instagram - photography, travel moments, food, following friends and lifestyle content</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Moving Images -->
+            <div class="media-category">
+                <div class="category-header">
+                    <span class="category-icon">🎬</span>
+                    <span class="category-title">Moving Images / Video</span>
+                    <span class="category-type consumer">Consumer</span>
+                </div>
+                <ul class="subcategory-list">
+                    <li>
+                        <span class="subcategory-name">Streaming Services (TV/Film)</span><br>
+                        <span class="examples">Netflix, YouTube - documentaries, sci-fi series (Black Mirror, Stranger Things), educational content</span>
+                    </li>
+                    <li>
+                        <span class="subcategory-name">Educational/Tutorial Videos</span><br>
+                        <span class="examples">YouTube, Bilibili - programming tutorials, conference talks, tech reviews, research paper explanations</span>
+                    </li>
+                    <li>
+                        <span class="subcategory-name">Short-form Video</span><br>
+                        <span class="examples">Instagram Reels, YouTube Shorts - quick entertainment, tech tips, life hacks</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Text-based Media -->
+            <div class="media-category">
+                <div class="category-header">
+                    <span class="category-icon">📝</span>
+                    <span class="category-title">Text-based Media</span>
+                    <span class="category-type both">Consumer & Generator</span>
+                </div>
+                <ul class="subcategory-list">
+                    <li>
+                        <span class="subcategory-name">Academic Writing</span><br>
+                        <span class="examples">Research papers, conference submissions, peer reviews (via Overleaf, Google Docs)</span>
+                    </li>
+                    <li>
+                        <span class="subcategory-name">Digital Communication</span><br>
+                        <span class="examples">Email (Outlook, Gmail), Slack, WeChat - daily academic and personal communication</span>
+                    </li>
+                    <li>
+                        <span class="subcategory-name">Technical Blogs & Forums</span><br>
+                        <span class="examples">Medium, Stack Overflow, Reddit (r/MachineLearning, r/PhD), Hacker News</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Music & Audio -->
+            <div class="media-category">
+                <div class="category-header">
+                    <span class="category-icon">🎵</span>
+                    <span class="category-title">Music & Audio</span>
+                    <span class="category-type consumer">Consumer</span>
+                </div>
+                <ul class="subcategory-list">
+                    <li>
+                        <span class="subcategory-name">Music Streaming</span><br>
+                        <span class="examples">Spotify, Apple Music - lo-fi beats for studying, pop, classical, ambient sounds</span>
+                    </li>
+                    <li>
+                        <span class="subcategory-name">Podcasts</span><br>
+                        <span class="examples">Spotify, Apple Podcasts - tech podcasts (Lex Fridman, The TWIML AI Podcast), news</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Games -->
+            <div class="media-category">
+                <div class="category-header">
+                    <span class="category-icon">🎮</span>
+                    <span class="category-title">Games</span>
+                    <span class="category-type consumer">Consumer</span>
+                </div>
+                <ul class="subcategory-list">
+                    <li>
+                        <span class="subcategory-name">Mobile Games</span><br>
+                        <span class="examples">Casual puzzle games, strategy games - used for short breaks between work</span>
+                    </li>
+                    <li>
+                        <span class="subcategory-name">PC Games</span><br>
+                        <span class="examples">Simulation and strategy games (Civilization VI, Cities: Skylines) - occasional weekend relaxation</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Still Images -->
+            <div class="media-category">
+                <div class="category-header">
+                    <span class="category-icon">📷</span>
+                    <span class="category-title">Still Images</span>
+                    <span class="category-type both">Consumer & Generator</span>
+                </div>
+                <ul class="subcategory-list">
+                    <li>
+                        <span class="subcategory-name">Photography</span><br>
+                        <span class="examples">iPhone camera, edited with Lightroom - travel photos, campus life, food photography</span>
+                    </li>
+                    <li>
+                        <span class="subcategory-name">Data Visualization & Diagrams</span><br>
+                        <span class="examples">Creating figures for papers using Python (Matplotlib, Seaborn), diagrams with draw.io</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Section 3: Challenges -->
+        <div class="card">
+            <h2 class="section-title">Section 3: Challenges with Media Tools</h2>
+            <div class="challenge-content">
+                <h3 class="challenge-title">Cross-Platform Content Synchronization and Format Incompatibility</h3>
+                <div class="challenge-description">
+                    <p>
+                        One significant challenge I face is the inconsistency in media formats and synchronization
+                        across different platforms and devices. As someone who uses multiple devices (MacBook, iPad,
+                        iPhone, and occasionally a Windows desktop in the lab), keeping my content accessible and
+                        properly formatted everywhere is frustrating.
+                    </p>
+                    <p>
+                        For example, when I create presentation slides or posters for conferences, I often design
+                        them on my MacBook using Keynote or specialized tools. However, when I need to present
+                        at a conference or share with collaborators who use Windows, font rendering issues,
+                        missing fonts, and layout shifts become a constant headache. Even exporting to PDF
+                        sometimes fails to preserve interactive elements or high-resolution graphics correctly.
+                    </p>
+                    <p>
+                        Similarly, when editing photos for Instagram or academic presentations, the color profiles
+                        differ between my devices, making it difficult to achieve consistent visual quality.
+                        An image that looks perfect on my MacBook might appear oversaturated or washed out on
+                        other screens. These seemingly minor technical issues consume significant time and
+                        often require maintaining multiple versions of the same content for different platforms.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>CSCE 656 - New Media | Texas A&M University | Spring 2025</p>
+        </div>
+    </div>
+</body>
+</html>
